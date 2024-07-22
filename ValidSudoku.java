@@ -6,7 +6,7 @@ class ValidSudoku {
         if (board == null || board.length != 9 || board[0].length != 9)
             return false;
 
-        // row
+        // for row
         for (int r = 0; r < 9; r++) {
             boolean[] b = new boolean[9];
             for (int c = 0; c < 9; c++) {
@@ -21,7 +21,7 @@ class ValidSudoku {
             }
         }
 
-        // column
+        // for column
         for (int c = 0; c < 9; c++) {
             boolean[] b = new boolean[9];
             for (int r = 0; r < 9; r++) {
@@ -36,6 +36,7 @@ class ValidSudoku {
             }
         }
 
+        // for 3 * 3 block
         for (int block = 0; block < 9; block++) {
             boolean[] b = new boolean[9];
 
